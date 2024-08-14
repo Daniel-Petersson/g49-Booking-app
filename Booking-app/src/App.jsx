@@ -4,6 +4,7 @@ import Header from './components/Header';
 import BookingList from './components/BookingList';
 import BookingForm from './components/BookingForm';
 import CancelBookingForm from './components/CancelBookingForm';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/cancel" element={<CancelBookingForm />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }

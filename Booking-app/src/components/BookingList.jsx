@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { getBookings } from "../services/bookingService"; 
+import React, { useEffect, useState } from 'react';
+import { getBookings } from '../services/bookingService';
 
 function BookingList() {
   const [bookings, setBookings] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchBookings = async ()=>{
-        try {
-            const fromDate = '2024-08-01';
-            const toDate = '2024-08-31';
-            const bookingsdata = await getBookings(fromDate, toDate);
-            setBookings(bookingsdata);
-    }catch (err){
-        setError(err.message || 'Failed to fetch bookings');
-    }
+    const fetchBookings = async () => {
+      try {
+        const fromDate = '2024-08-15';  // Justera datumintervallet som behövs
+        const toDate = '2024-08-15';  // Justera datumintervallet som behövs
+        const bookingsData = await getBookings(fromDate, toDate);
+        setBookings(bookingsData);
+      } catch (err) {
+        setError('Could not fetch bookings.');
+      }
     };
 
     fetchBookings();
@@ -23,14 +23,24 @@ function BookingList() {
   return (
     <div>
       <h2>Bookings</h2>
-      <ul className="list-group">
-      {error && <div className="error">{error}</div>} {/* Display error if exists */}
+      {error && <p>{error}</p>}
+      <div className="row">
         {bookings.map((booking) => (
-          <li key={booking.id} className="list-group-item">
-            Booking ID: {booking.id} - Date: {booking.dateTime}
-          </li>
+          <div key={booking.id} className="col-md-4 mb-3">
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">Booking ID: {booking.id}</h5>
+                <p className="card-text">
+                  <strong>Date and Time:</strong> {new Date(booking.dateTime).toLocaleString()}
+                </p>
+                <p className={`card-text ${booking.booked ? 'text-success' : 'text-danger'}`}>
+                  {booking.booked ? 'Confirmed' : 'Pending'}
+                </p>
+              </div>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

@@ -31,3 +31,14 @@ export const cancelBooking = async (bookingData) => {
     throw error;
   }
 };
+
+export const getBookingsById = async (bookingId) => {
+  try {
+    const response = await axios.get(`${API_URL}/details/${bookingId}`);
+    return response.data;
+  } catch (error) {
+    console.error('Failed to fetch slot with id ' + bookingId);
+    throw error;
+  }
+};
+

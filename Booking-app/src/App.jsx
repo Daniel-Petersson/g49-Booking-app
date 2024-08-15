@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<BookingList />} />
           <Route path="/bookings" element={<BookingList />} />
-          <Route path="/book" element={<BookingForm />} />
+          <Route path="/book/:bookingId" element={<BookingForm />} />
           <Route path="/cancel" element={<CancelBookingForm />} />
         </Routes>
       </div>

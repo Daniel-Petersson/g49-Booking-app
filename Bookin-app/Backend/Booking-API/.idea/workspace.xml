@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfac4dc7-5783-4441-b6e7-a8bf1fa67b7e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Booking-app/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Booking-app/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Booking-app/src/components/BookingList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Booking-app/src/components/BookingList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Booking-app/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Booking-app/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,29 +35,28 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Booking-API.executor&quot;: &quot;Run&quot;,
-    &quot;JAR Application.booking-api-0.1.0-RELEASE.jar.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/daniel/Documents/Lexicon/Front-end/24-25-26 ReactJS/booking-api-0.1.0-RELEASE.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Booking-API.executor": "Run",
+    "JAR Application.booking-api-0.1.0-RELEASE.jar.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/daniel/Documents/Repos/g49-Booking-app/Bookin-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Booking-API">
     <configuration name="Booking-API" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.springframework.boot.loader.launch.JarLauncher" />
-      <module name="Booking-API" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,7 +91,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723622933618</updated>
-      <workItem from="1723622935755" duration="11023000" />
+      <workItem from="1723622935755" duration="12697000" />
+      <workItem from="1723705023942" duration="124000" />
     </task>
     <servers />
   </component>

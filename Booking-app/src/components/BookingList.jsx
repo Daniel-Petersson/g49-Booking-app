@@ -10,8 +10,8 @@ function BookingList() {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const fromDate = '2024-08-15';  // Justera datumintervallet som behövs
-        const toDate = '2024-08-22';  // Justera datumintervallet som behövs
+        const fromDate = '2024-08-16';  // Justera datumintervallet som behövs
+        const toDate = '2024-08-23';  // Justera datumintervallet som behövs
         const bookingsData = await getBookings(fromDate, toDate);
         setBookings(bookingsData);
       } catch (err) {
@@ -23,7 +23,15 @@ function BookingList() {
   }, []);
 
   const handelButtonClick = (bookingId) => {
+    if (bookings.find((booking) => booking.id === bookingId).booked) {
+      navigate(`/cancel/${bookingId}`);
+    }else{
     navigate(`/book/${bookingId}`)
+    }
+  }
+
+  function buttonTitle(booked) {
+    return booked ? 'Cancel Slot' : 'Book Slot';
   }
 
   return (
@@ -42,7 +50,7 @@ function BookingList() {
                 <p className={`card-text ${booking.booked ? 'text-success' : 'text-danger'}`}>
                   {booking.booked ? 'Confirmed' : 'Pending'}
                 </p>
-                <button className="btn btn-primary"  onClick={() => handelButtonClick(booking.id)}>Book</button>
+                <button className="btn btn-primary w-100"  onClick={() => handelButtonClick(booking.id)}>{buttonTitle(booking.booked)}</button>
               </div>
             </div>
           </div>
@@ -51,5 +59,6 @@ function BookingList() {
     </div>
   );
 }
+
 
 export default BookingList;

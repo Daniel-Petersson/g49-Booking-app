@@ -36,7 +36,7 @@ function BookingList() {
 
   return (
     <div>
-      <h2>Bookings</h2>
+      <h2>Available Slots</h2>
       {error && <p>{error}</p>}
       <div className="row">
         {bookings.map((booking) => (
@@ -50,7 +50,7 @@ function BookingList() {
                 <p className={`card-text ${booking.booked ? 'text-success' : 'text-danger'}`}>
                   {booking.booked ? 'Confirmed' : 'Pending'}
                 </p>
-                <button className="btn btn-primary w-100"  onClick={() => handelButtonClick(booking.id)}>{buttonTitle(booking.booked)}</button>
+                <button className={`btn ${booking.booked ? 'btn-danger' : 'btn-primary'} w-100`}  onClick={() => handelButtonClick(booking.id)}>{buttonTitle(booking.booked)}</button>
               </div>
             </div>
           </div>
